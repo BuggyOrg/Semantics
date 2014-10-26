@@ -1,0 +1,122 @@
+{
+	"id": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646",
+	"name": "Buggy Semantics",
+	"description": "",
+	"order": [
+		"a52236c7-2072-f878-7683-81ea40b5dbce"
+	],
+	"folders": [
+		{
+			"id": "2adb04a7-203a-4d46-ba82-cecd6aada036",
+			"name": "Symbols",
+			"description": "",
+			"order": [
+				"0a40dd1a-ffb5-543a-4746-830245a12d88",
+				"f78cb9b6-1cfb-cbe3-3e17-209057e074f4",
+				"ed1d1865-8362-fcef-4430-6cb6bdf928a8",
+				"78264dd4-6ad4-5c07-ed70-2118744c2e06"
+			],
+			"collection_name": "Buggy Semantics",
+			"collection_id": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646"
+		}
+	],
+	"timestamp": 1414261638200,
+	"synced": false,
+	"requests": [
+		{
+			"id": "0a40dd1a-ffb5-543a-4746-830245a12d88",
+			"headers": "",
+			"url": "localhost:6789/symbol/by-name/abc",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"time": 1414361843328,
+			"name": "Get a Symbol by name",
+			"description": "Gets a description by symbol name.",
+			"collectionId": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646",
+			"responses": [],
+			"synced": false
+		},
+		{
+			"id": "78264dd4-6ad4-5c07-ed70-2118744c2e06",
+			"headers": "Content-Type: application/json\n",
+			"url": "localhost:6789/symbol",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414361998227,
+			"name": "Changes an element",
+			"description": "Changes the data of an element.",
+			"collectionId": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646",
+			"responses": [],
+			"synced": false,
+			"rawModeData": "{\n  \"name\": \"abd\",\n  \"cuid\": \"\"\n}"
+		},
+		{
+			"id": "a52236c7-2072-f878-7683-81ea40b5dbce",
+			"headers": "",
+			"url": "localhost:6789/source-info",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Source Information",
+			"description": "Gets information about the specific source used.",
+			"descriptionFormat": "html",
+			"time": 1414262952462,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646",
+			"synced": false,
+			"rawModeData": ""
+		},
+		{
+			"id": "ed1d1865-8362-fcef-4430-6cb6bdf928a8",
+			"headers": "Content-Type: application/json\n",
+			"url": "localhost:6789/symbol/",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414363110473,
+			"name": "Delete Symbol",
+			"description": "Removes a symbol completely",
+			"collectionId": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646",
+			"responses": [],
+			"synced": false,
+			"rawModeData": "{\n  \"cuid\" : \"\"\n}"
+		},
+		{
+			"id": "f78cb9b6-1cfb-cbe3-3e17-209057e074f4",
+			"headers": "Content-Type: application/json\n",
+			"url": "localhost:6789/symbol",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"time": 1414262596805,
+			"name": "Create a new element",
+			"description": "Creates a new element using the posted data.",
+			"collectionId": "c4394bbc-0cf2-1ad0-dc6c-8065e6ba2646",
+			"responses": [],
+			"synced": false,
+			"rawModeData": "{\n\t\"name\": \"abc\"\n}"
+		}
+	]
+}
