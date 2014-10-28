@@ -14,7 +14,9 @@
  along with Buggy.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-define ["ls!src/server/symbol","json!package","express", "body-parser"] (Symbol, pkg, express, body-parser) ->
+define ["ls!src/server/symbol",
+        "ls!src/server/implementation",
+        "json!package","express", "body-parser"] (Symbol, Implementation, pkg, express, body-parser) ->
     
   {
     serve: (data, options) ->
@@ -24,6 +26,7 @@ define ["ls!src/server/symbol","json!package","express", "body-parser"] (Symbol,
       app.use body-parser.json!
       
       app.use "/symbol", Symbol.router data
+      app.use "/implementation", Implementation.router data
       app.get "/source-info", (req,res)->
         res.json {
           version: pkg.version

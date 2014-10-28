@@ -29,8 +29,12 @@ define ["Buggy","ls!src/json-data", "express", "cuid"] (Buggy, dt, express, cuid
       router = express.Router!
       router.get "/by-name/:name", (req, res) -> 
         res.json (data.symbols |> filter -> it.name == req.params.name)
+      router.get "/search-by-name/:name", (req,res)->
+        res.json (data.symbols |> filter -> (it.name.indexOf req.params.name) > -1)
       router.get "/by-cuid/:cuid", (req, res) -> 
         res.json (data.symbols |> filter -> it.cuid == req.params.cuid)
+      router.get "/all", (req,res) ->
+        res.json data.symbols
       router.post "/", (req,res) ->
         symbol = Symbol.create req.body
         symbol.cuid = cuid!
