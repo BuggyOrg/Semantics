@@ -14,9 +14,10 @@
  along with Buggy.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-define ["ls!src/server/symbol",
+define ["Buggy",
+        "ls!src/server/symbol",
         "ls!src/server/implementation",
-        "json!package","express", "body-parser"] (Symbol, Implementation, pkg, express, body-parser) ->
+        "json!package","express", "body-parser"] (Buggy, Symbol, Implementation, pkg, express, body-parser) ->
     
   {
     serve: (data, options) ->
@@ -30,6 +31,7 @@ define ["ls!src/server/symbol",
       app.get "/source-info", (req,res)->
         res.json {
           version: pkg.version
+          buggy: Buggy.Buggy.version
         }
         
       app.listen options.port

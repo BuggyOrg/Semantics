@@ -15,7 +15,6 @@
  */
 
 define ["Buggy","ls!src/json-data", "express", "cuid"] (Buggy, dt, express, cuid) ->
-  Buggy = Buggy.Buggy
   Implementation = Buggy.Implementation
   
   req-cuid = (req,res) ->
